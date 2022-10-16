@@ -1,0 +1,32 @@
+
+<div class="container" style="margin-top: 10px;" width="200" height="200" >
+  <div class="card" >
+    <div class="card-header" >
+		<h3>Personas </h3>				
+    </div>
+	<div class="card-body" >
+		<table class="table table-sm">
+			<thead>
+			  <tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Email</th>
+				<th>Acciones</th>
+			  </tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let persona of personas" class="text-center">				
+				<!--tr-->
+				<td>{{persona.id}}</td>
+				<td>{{persona.nombre}}</td>
+				<td>{{persona.apellido}}</td>
+				<td>
+				   <button  (click)= "Editar(persona)" class="btn btn-warning">Editar</button> 
+				   <button  (click)= "Eliminar(persona)" class="btn btn-danger" style="margin-left: 10px; font-style: black; background-color:red">Delete</button> 
+				</td>
+				</tr>
+			</tbody>
+		</table>
+    </div>
+  </div>
+</div>
